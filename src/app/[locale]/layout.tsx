@@ -30,14 +30,18 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
   metadataBase: new URL("https://dellub.com"),
   alternates: {
-    canonical: "/",
+    canonical: "/pt-BR",
     languages: {
-      "pt-BR": "/",
+      "pt-BR": "/pt-BR",
       en: "/en",
     },
   },
   openGraph: {
     images: "/og-image.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: "/twitter-image.png",
   },
   title: "Dellub - Design e desenvolvimento de produtos digitais",
   description: "Design e desenvolvimento de produtos digitais",

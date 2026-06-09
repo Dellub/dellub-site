@@ -23,12 +23,12 @@ function LinkedinIcon({ className }: { className?: string }) {
 const PHOTOS = [
   {
     src: "/images/founders/amanda.jpg",
-    linkedin: "https://www.linkedin.com/company/agenciadellub",
+    linkedin: "https://www.linkedin.com/in/amanda-merien/",
     position: "object-[center_22%]",
   },
   {
     src: "/images/founders/rodrigo.jpg",
-    linkedin: "https://www.linkedin.com/company/agenciadellub",
+    linkedin: "https://www.linkedin.com/in/rodrigocgodoy/",
     position: "object-[center_15%]",
   },
 ];

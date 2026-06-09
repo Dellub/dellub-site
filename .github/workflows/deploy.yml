@@ -39,5 +39,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/ # ./build/ se for Create React App
+          local-dir: ./out/ # Next.js static export (output: 'export')
           server-dir: ./ # ex: ./public_html/ em hospedagem compartilhada
