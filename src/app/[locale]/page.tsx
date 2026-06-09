@@ -1,16 +1,15 @@
-import { setStaticParamsLocale } from 'next-international/server'
+import { setRequestLocale } from "next-intl/server";
 
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
-import { Agency } from '@/sections/agency'
-import { Hero } from '@/sections/hero'
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { Agency } from "@/sections/agency";
+import { Faq } from "@/sections/faq";
+import { Hero } from "@/sections/hero";
+import { Process } from "@/sections/process";
 
-export default async function Page({
-  params: { locale },
-}: {
-  params: { locale: string }
-}) {
-  setStaticParamsLocale(locale)
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
   return (
     <>
@@ -18,8 +17,10 @@ export default async function Page({
       <main className="flex flex-col items-stretch">
         <Hero />
         <Agency />
+        <Process />
+        <Faq />
       </main>
       <Footer />
     </>
-  )
+  );
 }

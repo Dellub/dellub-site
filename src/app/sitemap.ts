@@ -1,7 +1,7 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
 
-const url = 'https://dellub.com'
- 
+const url = "https://dellub.com";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -9,8 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       alternates: {
         languages: {
-          'pt-BR': `${url}/`,
-          'en': `${url}/en`,
+          "pt-BR": `${url}/`,
+          en: `${url}/en`,
         },
       },
     },
@@ -19,20 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       alternates: {
         languages: {
-          'pt-BR': `${url}/about`,
-          'en': `${url}/en/about`,
-        },
-      },
-    },
-    {
-      url: `${url}/blog`,
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          'pt-BR': `${url}/blog`,
-          'en': `${url}/en/blog`,
+          "pt-BR": `${url}/about`,
+          en: `${url}/en/about`,
         },
       },
     },
   ];
-};
+}

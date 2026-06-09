@@ -1,0 +1,139 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About us",
+      "contact": "Contact"
+    }
+  },
+  "footer": {
+    "title": "Do you have a project? Let's talk.",
+    "subtitle": "We transform ideas into great results",
+    "copywriting": "© 2024 | dellub・All rights reserved.",
+    "design": "Design by",
+    "backToTop": "Back to top",
+    "nav": {
+      "title": "Navigation",
+      "social": "Social Networks",
+      "home": "Home",
+      "about": "About us",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Design and development of digital products_",
+      "content": {
+        "text": "An interactive and collaborative studio",
+        "paragraph": "We build exceptional projects for your business through strategy, creativity and technological innovation"
+      },
+      "button": "Start Project"
+    },
+    "agency": {
+      "title": "Creative digital product agency focused on scaling brands through unparalleled web experience.",
+      "paragraph1": "Our team of experienced designers and developers has only one thing in mind; working on your ideas to bring a smile on the faces of your users around the world.",
+      "paragraph2": "From good visual design to highly optimized front-end development. We're here to refine, design and build your brand and digital product.",
+      "paragraph3": "We combine the creative talent to create visually captivating interfaces with the technical expertise to develop products that add real value to businesses and user experiences. We are ready to transform your ideas into powerful and impactful solutions that drive the success of your project."
+    },
+    "process": {
+      "eyebrow": "Our process",
+      "title": "We create modern software, apps, websites and experiences.",
+      "steps": [
+        {
+          "number": "01.",
+          "title": "Project kick-off",
+          "description": "The start is one of the fundamental phases of our process! During this stage we exchange emails, hold meetings and, in the end, close a complete brief containing all the information needed to build a project that meets your company's real needs."
+        },
+        {
+          "number": "02.",
+          "title": "UI Design",
+          "description": "We begin with the wireframe, where a low-fidelity sketch is created to validate the structure of the pages. Then the layout, in which we apply best practices to develop visual solutions that work."
+        },
+        {
+          "number": "03.",
+          "title": "Development",
+          "description": "We use technologies such as WordPress, Framer, Webflow, React and JavaScript and turn the design into reality on the front-end."
+        },
+        {
+          "number": "04.",
+          "title": "Project delivery",
+          "description": "Our commitment doesn't end at delivery! The market evolves, design and technologies improve, and dellub is always keeping up with these changes."
+        }
+      ],
+      "footer": "Our team is ready to offer tailored solutions that meet your specific needs and raise the quality and success of your projects.",
+      "cta": "Get in touch"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How do dellub's processes work?",
+          "answer": [
+            "We analyze the project's requirements, timeline, needs and overall scope. We then confirm this information so we can put together a detailed quote.",
+            "Once the quote is approved, our team prepares a contract with all the details of the work and sends it by email for signature, along with a deposit (usually between 25% and 50%). Throughout every stage you will be supported by Amanda, who will keep you updated on progress, answer your questions and make sure your experience building a project with us is excellent.",
+            "As we approach the end, we take pride in launching another successful project and we stay by our clients' side to support them in growing their business."
+          ]
+        },
+        {
+          "question": "Do you provide only Design or development too?",
+          "answer": [
+            "We work on both fronts: we handle the design and also the development of your digital product, from the visual concept to the front-end implementation. You can hire just the design or the full package, depending on what the project needs."
+          ]
+        },
+        {
+          "question": "How long does a project take and how much will it cost?",
+          "answer": [
+            "The timeline and investment vary according to the scope, complexity and number of screens in the project. After understanding your needs, we send a detailed proposal with a schedule and pricing before starting any work."
+          ]
+        },
+        {
+          "question": "Which programming technologies do you use?",
+          "answer": [
+            "We build products with modern, scalable technologies such as React, Next.js and TypeScript, always choosing the stack that best fits each project's goals."
+          ]
+        },
+        {
+          "question": "Why is it important to have a web presence and an attractive, functional design?",
+          "answer": [
+            "A well-built digital presence conveys credibility, improves the user experience and drives results. An attractive and functional design helps your brand stand out and turn visitors into customers."
+          ]
+        }
+      ]
+    }
+  },
+  "about": {
+    "hero": {
+      "label": "We're here to help you build incredible projects!",
+      "title": "We combine creativity, design, technology and meticulous attention to detail to deliver exceptional results"
+    },
+    "marquee": "IDEAS WORTH BRINGING TOGETHER",
+    "sobre": {
+      "eyebrow": "About us",
+      "title": "Flying the dellub<reg>®</reg> flag and building great projects since 2019.",
+      "paragraph": "We are a team of passionate designers and developers, ready to build great software projects. Our focus is innovation, bringing new ideas and creative solutions to contribute meaningfully to your projects. With years of experience, our seasoned team of designers and developers is committed to turning your ideas into reality, with a single goal in mind: to deliver experiences that put a smile on the faces of your users around the world.",
+      "cta": "Start Project"
+    },
+    "founders": {
+      "title": "Meet our\nfounders",
+      "subtitle": "Specialists in Web Design, UX/UI, Webflow, Framer, Wordpress and Front End Development.",
+      "members": [
+        {
+          "name": "Amanda Merien",
+          "role": "Co-founder and Product Designer"
+        },
+        {
+          "name": "Rodrigo Godoy",
+          "role": "Co-founder and Software development"
+        }
+      ]
+    },
+    "join": {
+      "title": "Join dellub®\nand make a difference.",
+      "paragraphs": [
+        "We are a culture-centered company that puts people above profit. We are guided by our core values and aim to make a positive impact every day.",
+        "We look for high-performing talent who believe in the power of “we” and live their lives as good humans. We'd love to hear from you if you want to help us build dellub® and grow your career."
+      ],
+      "cta": "Send an email"
+    }
+  }
+}

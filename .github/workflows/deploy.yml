@@ -1,0 +1,43 @@
+name: Deploy React via FTP
+
+on:
+  push:
+    branches: [main] # ajuste para a branch que você usa
+
+# Força as actions em JS (pnpm/action-setup e FTP-Deploy-Action ainda em
+# Node 20) a rodarem no runtime Node 24, eliminando o aviso de depreciação.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v5
+
+      - name: Instalar pnpm
+        uses: pnpm/action-setup@v4
+        # versão vem do campo "packageManager" do package.json (pnpm@10.33.0)
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          cache: "pnpm"
+
+      - name: Instalar dependências
+        run: pnpm install --frozen-lockfile
+
+      - name: Build do projeto
+        run: pnpm build
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/ # ./build/ se for Create React App
+          server-dir: ./ # ex: ./public_html/ em hospedagem compartilhada

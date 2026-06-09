@@ -1,62 +1,73 @@
+import { GoogleTagManager } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter, Raleway } from "next/font/google";
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { GoogleTagManager } from '@next/third-parties/google'
+import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 
-import { Provider } from "./provider";
-import { cn } from "@/utils/cn";
+import { routing } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  display: 'swap',
-  variable: '--font-inter',
+  display: "swap",
+  variable: "--font-inter",
 });
 const raleway = Raleway({
   subsets: ["latin"],
-  display: 'swap',
-  variable: '--font-raleway',
+  display: "swap",
+  variable: "--font-raleway",
 });
 
-export async function generateStaticParams() {
-  return ['pt-BR', 'en'];
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dellub.com'),
+  metadataBase: new URL("https://dellub.com"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
     languages: {
-      'pt-BR': '/',
-      'en': '/en',
+      "pt-BR": "/",
+      en: "/en",
     },
   },
   openGraph: {
-    images: '/og-image.png',
+    images: "/og-image.png",
   },
   title: "Dellub - Design e desenvolvimento de produtos digitais",
   description: "Design e desenvolvimento de produtos digitais",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang={locale} className={cn(inter.variable, raleway.variable, "scroll-smooth")}>
       <GoogleTagManager gtmId="GTM-NDMKWNP4" />
-      <body className={cn(inter.variable, raleway.variable, "antialiased")}>
-        <Provider locale={locale}>
+      <body className="antialiased">
+        <NextIntlClientProvider>
           {children}
           <Analytics />
           <SpeedInsights />
-        </Provider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
-};
+}
