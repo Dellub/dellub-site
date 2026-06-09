@@ -135,5 +135,41 @@
       ],
       "cta": "Send an email"
     }
+  },
+  "contact": {
+    "label": "Ready to start?",
+    "heading": "Tell us a bit about your project and how we can help you.",
+    "intro": {
+      "title": "Tell us about your project",
+      "text": "Share a bit about your project with us and how we can contribute. <b>We'll get in touch today</b> via WhatsApp to bring an exceptional project to life."
+    },
+    "meeting": {
+      "title": "Prefer a meeting?",
+      "cta": "Schedule now"
+    },
+    "message": {
+      "title": "Send a message",
+      "phone": "+55 11 96599-2767"
+    },
+    "form": {
+      "name": { "label": "Name", "placeholder": "How would you like to be called?" },
+      "company": { "label": "Company name", "placeholder": "Enter the company name" },
+      "email": { "label": "E-mail", "placeholder": "Enter your best e-mail" },
+      "whatsapp": { "label": "Whatsapp", "placeholder": "Enter your whatsapp number" },
+      "help": {
+        "title": "How can we help?",
+        "options": ["UI/UX Design", "Web Design", "Web development", "App development"]
+      },
+      "deadline": {
+        "title": "What's the timeline for delivery?",
+        "options": ["7-15 days", "1 to 2 months", "3 to 4 months", "I need it urgently"]
+      },
+      "budget": {
+        "title": "How much do you expect to invest?",
+        "options": ["Under R$ 10k", "R$11-20k", "R$ 21-50k", "+ R$ 51k"]
+      },
+      "submit": "Send now",
+      "errors": { "required": "Required field", "email": "Invalid e-mail" }
+    }
   }
 }

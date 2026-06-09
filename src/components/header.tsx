@@ -43,13 +43,15 @@ export async function Header({ variant = "overlay" }: HeaderProps) {
       )}
     >
       <div className="container flex items-center justify-between px-4 py-6 lg:px-0">
-        <Image
-          src={solid ? "/brand/logo-dark.svg" : "/brand/logo.svg"}
-          alt="Logo Dellub"
-          width={83}
-          height={23}
-          className="h-auto w-[71px] lg:w-[83px]"
-        />
+        <Link href="/">
+          <Image
+            src={solid ? "/brand/logo-dark.svg" : "/brand/logo.svg"}
+            alt="Logo Dellub"
+            width={83}
+            height={23}
+            className="h-auto w-[71px] lg:w-[83px]"
+          />
+        </Link>
 
         <nav className="hidden lg:flex">
           <ul className="flex items-center gap-9">

@@ -135,5 +135,41 @@
       ],
       "cta": "Enviar um e-mail"
     }
+  },
+  "contact": {
+    "label": "Pronto para começar?",
+    "heading": "Nos conte um pouco sobre o seu projeto e como poderemos te ajudar.",
+    "intro": {
+      "title": "Nos conte sobre o seu projeto",
+      "text": "Compartilhe um pouco sobre seu projeto conosco e como podemos contribuir. <b>Entraremos em contato ainda hoje</b> via WhatsApp para dar vida a um projeto excepcional."
+    },
+    "meeting": {
+      "title": "Prefere uma reunião?",
+      "cta": "Agendar agora"
+    },
+    "message": {
+      "title": "Envie uma mensagem",
+      "phone": "+55 11 96599-2767"
+    },
+    "form": {
+      "name": { "label": "Nome", "placeholder": "Como gostaria de ser chamado?" },
+      "company": { "label": "Nome da empresa", "placeholder": "Digite o nome da empresa" },
+      "email": { "label": "E-mail", "placeholder": "Digite o seu melhor e-mail" },
+      "whatsapp": { "label": "Whatsapp", "placeholder": "Digite seu número de whatsapp" },
+      "help": {
+        "title": "Como podemos ajudar?",
+        "options": ["UI/UX Design", "Web Design", "Programação web", "Programação app"]
+      },
+      "deadline": {
+        "title": "Qual o prazo que temos para a entrega?",
+        "options": ["7-15 dias", "1 a 2 meses", "3 a 4 meses", "Preciso com urgência"]
+      },
+      "budget": {
+        "title": "Quanto você espera investir?",
+        "options": ["Menos de R$ 10 mil", "R$11-20 mil", "R$ 21-50 mil", "+ R$ 51 mil"]
+      },
+      "submit": "Enviar agora",
+      "errors": { "required": "Campo obrigatório", "email": "E-mail inválido" }
+    }
   }
 }

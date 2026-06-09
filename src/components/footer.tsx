@@ -2,9 +2,15 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
 import { Button } from "./button";
+import { Switch } from "./switch";
 
-export async function Footer() {
+type FooterProps = {
+  showCta?: boolean;
+};
+
+export async function Footer({ showCta = true }: FooterProps) {
   const t = await getTranslations();
 
   const nav = [
@@ -44,14 +50,21 @@ export async function Footer() {
   return (
     <footer className="bg-[url('/images/bg-hero.webp')] bg-cover bg-no-repeat">
       {/* Mobile */}
-      <div className="pb-5 lg:hidden">
-        <div className="flex flex-col items-center gap-[54px] px-[18px] pt-[78px]">
-          <h2 className="max-w-[357px] text-center font-title text-[38px] font-semibold leading-tight text-white">
-            {t("footer.title")}
-          </h2>
-          <Button />
-        </div>
-        <div className="mx-[18px] mt-[34px] flex flex-col items-center rounded-2xl bg-white px-6 pt-[33px] pb-10">
+      <div className={cn("pb-5 lg:hidden", !showCta && "pt-[56px]")}>
+        {showCta && (
+          <div className="flex flex-col items-center gap-[54px] px-[18px] pt-[78px]">
+            <h2 className="max-w-[357px] text-center font-title text-[38px] font-semibold leading-tight text-white">
+              {t("footer.title")}
+            </h2>
+            <Button />
+          </div>
+        )}
+        <div
+          className={cn(
+            "mx-[18px] flex flex-col items-center rounded-2xl bg-white px-6 pt-[33px] pb-10",
+            showCta && "mt-[34px]",
+          )}
+        >
           <div className="flex flex-col items-center gap-[14px] text-center">
             <h3 className="max-w-[273px] font-title text-[24px] font-bold leading-normal text-gray-950">
               {t("footer.subtitle")}
@@ -118,18 +131,23 @@ export async function Footer() {
             <span className="font-text text-[14px] font-bold leading-normal text-gray-500">
               {t("footer.design")} <span className="text-gray-950">Amanda Merien</span>
             </span>
+            <div className="mt-2">
+              <Switch />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Desktop */}
       <div className="hidden flex-col gap-[4.905rem] pt-[6.411rem] pb-[2.563rem] lg:flex">
-        <div className="container flex flex-col items-center gap-10">
-          <h2 className="font-title text-white text-center font-semibold text-6xl leading-[4.403rem] max-w-[15ch] w-full">
-            {t("footer.title")}
-          </h2>
-          <Button />
-        </div>
+        {showCta && (
+          <div className="container flex flex-col items-center gap-10">
+            <h2 className="font-title text-white text-center font-semibold text-6xl leading-[4.403rem] max-w-[15ch] w-full">
+              {t("footer.title")}
+            </h2>
+            <Button />
+          </div>
+        )}
         <div className="container relative rounded-3xl pt-14 pr-[6.875rem] pb-48 pl-[4.5rem] bg-white flex justify-between items-start">
           <a href="#header" className="flex items-center gap-[0.688rem] absolute bottom-8 right-7">
             {t("footer.backToTop")}
@@ -165,6 +183,9 @@ export async function Footer() {
             <span className="font-text font-bold text-gray-500 text-sm leading-[1.059rem]">
               {t("footer.design")} <span className="text-gray-950">Amanda Merien</span>
             </span>
+            <div className="mt-6">
+              <Switch />
+            </div>
           </div>
           <div className="flex gap-[5.375rem]">
             <div className="flex flex-col gap-6">
